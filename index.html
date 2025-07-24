@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOT VERIFY - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-content animate-fade-slide-in">
+            <h1 class="welcome-title">
+                Welcome to
+                <span class="dot-verify-title">DOT VERIFY</span>
+            </h1>
+            <p class="redirect-text">Redirecting in <span id="countdown">5</span> seconds...</p>
+        </div>
+    </div>
+    
+    <script>
+    
+        let countdown = 5;
+        const countdownEl = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownEl.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'goal.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
